@@ -263,6 +263,10 @@ See more examples [here](https://github.com/ecomfe/vue-echarts/tree/master/src/d
 
   This prop indicates ECharts instance should be resized automatically whenever its root is resized.
 
+* `debounce` (default: `100`)
+
+  Debounce (in ms) when auto resizing.
+
 * `manual-update` (default: `false`)
 
   For critical performance scenarios (having a large dataset) we'd better bypass Vue's reactivity system for `options` prop. By specifying `manual-update` prop with `true` and not providing `options` prop, the dataset won't be watched anymore. After doing so, you need to retrieve the component instance with `ref` and manually call `mergeOptions` method to update the chart.
